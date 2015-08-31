@@ -16,6 +16,7 @@
 #ident "$Project: polymake $$Id: gmp_init.cc 7315 2006-04-02 21:37:53Z gawrilow $"
 
 #include <memory>
+#include <cstring>
 #include "gmp_init.h"
 
 #if defined(__GNUC__)

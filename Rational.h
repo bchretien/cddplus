@@ -17,6 +17,7 @@
 #define _POLYMAKE_GMP_RATIONAL_H "$Project: polymake $$Id: Rational.h 7565 2007-01-16 16:29:43Z gawrilow $"
 
 #include <Integer.h>
+#include <cstring>
 
 #if __GNU_MP_VERSION < 4
 #define _tmp_little_Integer(x) \

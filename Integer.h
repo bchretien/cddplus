@@ -22,6 +22,7 @@
 #include <cstdlib>
 #include <gmp_init.h>
 #include <cctype>
+#include <climits>
 #include <limits>
 
 class Integer; class Rational;
