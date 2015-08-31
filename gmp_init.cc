@@ -31,7 +31,7 @@ namespace {
 # define pm_gmp_reallocate std::__alloc::reallocate
 #endif // gcc 3.3
 
-#if __GNUC__==3 && __GNUC_MINOR__==4 || __GNUC__==4
+#if __GNUC__==3 && __GNUC_MINOR__==4 || __GNUC__==4 || __GNUC__==5
 # include <ext/pool_allocator.h>
 
 namespace {
