@@ -1,0 +1,99 @@
+cdd+ HISTORY file    (as of August 19, 2003)
+
+*** cdd+ version (date) / changes ***
+
+cdd+ Version 0.77 (August 19, 2003) /
+   This is a minor bug fix version of the previous version.  Namely,
+   the dual simplex method might cycle in the Phase I, although it
+   is rather rare.   The fix is for the options "vertex_listing"
+   and "facet_listing" which run the dual simplex as a default but
+   switches to the criss-cross method when it generates too many pivots.
+   The cycling examples were reported by Boryeu Mao (bmao@Raven.pnu.com).
+   This version can be compiled with gcc-3.1.* or gcc-3.2.*.  The earlier
+   version gcc-2.95.* is not compatible with this release.
+
+cdd+ Version 0.76 (March 17, 1999) /
+   This is functionally the same as Ver. 075.  This version can
+   be compiled to run with GNU's GMP rational arithmetic library using
+   Polymake's GMP-wrappers.  cddr+ with GMP runs much faster than
+   the previous versions of cddr+ (with g++ Rational library). 
+
+cdd+ Version 0.75 (November 30, 1997) /
+   This is a maintenance update of the previous version to employ the 
+   new 1997 Polyhedra format (introducing H-representation and
+   V-representation statements).  Three options for accuracy control
+   is added: "zero_tolerance", "round_output_off" and "output_digits".
+
+cdd+ Version 0.74 (June 17, 1996) /
+   Few minor bug fixes were made.
+
+cdd+ Version 0.74beta2 (June 5, 1996) /
+   Also "vertex_listing_external" and "facet_listing_external"
+   are added.  These options do "vertex_listing" and "facet_listing"
+   against the external file which can be huge.  These options are
+   useful when one has a small candidate set of vertices (or inequalities)
+   and a large set of perhaps-redundant points (or inequalities).
+   The external file must be named as "test.ext.external" (test.ine.external)
+   if the candidate input file is test.ext (test.ine).
+
+cdd+ Version 0.74beta (June 4, 1996) /
+   The option "vertex_listing" is added.
+   The dual simplex method uses the standard Phase I instead of 
+   the criss-cross method. Consequently the LP code is faster.
+
+cdd+ Version 0.74alpha (March 30, 1996) /
+   The default output file names have been changed to be consistent
+   with the transformation.  To avoid confusion, *.ine file should
+   be used only for a system of linear inequalities, and *.ext file
+   only for a set of extreme points and rays.  Accordingly,
+   the files *.ead (previously *.adj) and *.ecd (previously *.icd)
+   are reserved for the adjacency and incidence files for the extremal
+   vertices/rays.   
+   Similarly, *.iad (previously *.iad) and *.icd (previously none)
+   are reserved for the adjacency and incidence files for the inequality
+   data.
+
+   Also, when a file with default file name exists in the current
+   directory, the default extension name will be doubled.  For instance,
+   if test.ine is input and test.ext exists, then the extreme points
+   and rays will be written in the file test.ext.ext.  The program
+   does not check "test.ext.ext" exists, and thus such a file
+   will be overwritten if exists.
+
+cdd+ Version 0.73 (Septembe 6, 1995) /
+   A new option "input_adjacency" has been added.
+   The output format of incidence file is slightly modified. (See
+   the Reference Manual cddman.tex).  This incidence file format is compatible
+   with cdd-056 and we will try not to change the format any more.
+
+cdd+ Version 0.72a (April 16, 1995) /
+   Cycling bug of Version 072 of LP maximize and minimize has been 
+   fixed.
+cdd+ Version 0.72 (April 16, 1995) /
+   The option "postanalysis" is added. This option is to be used 
+   after *.ext file is obtained.  When this option is set
+   with adjacency and/or incidence options, one can get
+   adjacency and incidence files from both *.ine and *.ext
+   files.  Thus it is not necessary to generate *.adj and *.icd
+   files together with *.ext file. 
+
+cdd+ Version 0.71 (April 15, 1995) /
+   Two new functions (through options) are added.  The option 
+   "facet_listing" checks whether each input inequality determines
+   a facet or not.  The second option "tope_listing" generates
+   all full-dimensional regions (topes) of the associated
+   arrangement of hyperplanes by reverse search algorithm. 
+   Also, the option "show_tableau" is added to illustrate
+   how the criss-cross method works in the tableau (dictornary)
+   form.  Criss-cross LP solver is now sensitive to ordering
+   options, lexmin, minindex, radom, etc.
+
+  cdd+ Version 0.70 (April 3, 1995) /
+   The first C++ version of cdd which can run on both floating-point
+   and rational (exact) arithmetics.  The basic functions are
+   identical to cdd-055.  This version requires GNU gcc compilers
+   (2.6.0 or higher) and a compatible g++lib.
+
+
+--- end of file: cddHISTORY ---
+
